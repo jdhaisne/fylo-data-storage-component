@@ -4,8 +4,7 @@
   "description": "solution for the Fylo data storage component challenge at frontend mentor",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/fylo-data.scss:./css/fylo-data.css
-    "
+    "sass": "sass --watch ./sass/fylo-data.scss:./css/fylo-data.css"
   },
   "repository": {
     "type": "git",
