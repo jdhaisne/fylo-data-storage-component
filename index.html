@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet"> 
+
+  <link rel="stylesheet" href="./css/fylo-data.css">
+  
+  <title>Frontend Mentor | Fylo data storage component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="main-container">
+    <div class="tool-bar main-container__secondary-container">
+      <img src="images/logo.svg" alt="fylo_logo" class="tool-bar__logo">
+      <div class="flex">
+        <button class="btn">
+          <img src="images/icon-document.svg" alt="document" class="btn__icon">
+        </button>
+        <button class="btn">
+          <img src="images/icon-folder.svg" alt="folder" class="btn__icon">
+        </button class="btn">
+        <button class="btn">
+          <img src="images/icon-upload.svg" alt="upload" class="btn__icon"> 
+        </button>
+      </div>
+
+    </div>
+    <div class="storage-info main-container__secondary-container">
+      <div class="usage">
+        You’ve used <strong class="usage__size">815 GB</strong>  of your storage
+      </div>
+      
+      
+     
+      <div class="progress-bar">
+        <div class="progress-bar__bar-container">
+          <div class="progress-bar__bar">
+            <div class="progress-bar__cursor"></div>
+          </div>
+        </div>
+        
+        <div class="progress-bar__boundary">0 GB</div>
+        <div class="progress-bar__boundary">1000 GB</div>
+      </div>
+      <div class="stock">
+        <span class="stock__number">185</span> <span class="stock__left">GB Left</span>
+      </div>
+    </div>    
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>

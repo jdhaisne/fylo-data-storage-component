@@ -1,0 +1,128 @@
+$gradient: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+
+$pale-blue: hsl(243, 100%, 93%);
+$grayish-blue: hsl(229, 7%, 55%);
+$dark-blue: hsl(228, 56%, 26%);
+$very-dark-blue: hsl(229, 57%, 11%);
+
+html{
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    color: $pale-blue;
+    height: 100%;
+}
+
+body {
+    background: url(../images/bg-desktop.png) no-repeat bottom left, $very-dark-blue;
+    background-size: 100% 300px;
+    @media (max-width: 600px) {
+        background: url(../images/bg-mobile.png) no-repeat top left, $very-dark-blue;
+        background-size: 100% 100%;
+    }
+}
+
+.main-container {
+    margin: auto;
+    padding: 50px 10px;
+    &__secondary-container {
+        margin: 10px;
+    }
+}
+
+.tool-bar {
+    
+    background-color: $dark-blue;
+    border-radius: 10px 60px 10px 10px;
+    width: 80%;
+    padding: 25px;
+
+    &__logo {
+        display: block;
+    }
+
+    &__icon {
+        border: 10px solid $very-dark-blue;
+    }
+}
+
+.flex {
+    display: flex;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    background-color: $very-dark-blue;
+    border: 0;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 8px;
+    &__icon {
+        width: 20px;
+    }
+}
+
+.storage-info {
+    background-color: $dark-blue;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.usage {
+    &__size {
+        font-weight: 700;
+        display: inline;
+    }
+}
+
+.progress-bar {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &__bar-container {
+        padding: 2px;
+        background: $very-dark-blue;
+        border-radius: 14px;
+        width: 100%;
+        margin: 10px 0px;
+    }
+    &__bar {
+        background: $gradient;
+        height: 10px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        border-radius: 10px;
+        width: 81.5%;
+    }
+    &__cursor {
+        background: $pale-blue;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        margin-right: 2px;
+    }
+    &__boundary {
+        font-weight: 700;
+    }
+}
+
+.stock {
+    background: white;
+    border-radius: 15px;
+
+    padding: 15px;
+
+    &__number {
+        color: $very-dark-blue;
+        font-size: 2em;
+        font-weight: 700;
+    }
+    &__left {
+        color: $grayish-blue;
+    }
+}

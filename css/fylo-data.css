@@ -1,0 +1,118 @@
+html {
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  color: #dddbff;
+  height: 100%;
+}
+
+body {
+  background: url(../images/bg-desktop.png) no-repeat bottom left, #0c122c;
+  background-size: 100% 300px;
+}
+@media (max-width: 600px) {
+  body {
+    background: url(../images/bg-mobile.png) no-repeat top left, #0c122c;
+    background-size: 100% 100%;
+  }
+}
+
+.main-container {
+  margin: auto;
+  padding: 50px 10px;
+}
+.main-container__secondary-container {
+  margin: 10px;
+}
+
+.tool-bar {
+  background-color: #1d2c67;
+  border-radius: 10px 60px 10px 10px;
+  width: 80%;
+  padding: 25px;
+}
+.tool-bar__logo {
+  display: block;
+}
+.tool-bar__icon {
+  border: 10px solid #0c122c;
+}
+
+.flex {
+  display: flex;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  background-color: #0c122c;
+  border: 0;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 8px;
+}
+.btn__icon {
+  width: 20px;
+}
+
+.storage-info {
+  background-color: #1d2c67;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.usage__size {
+  font-weight: 700;
+  display: inline;
+}
+
+.progress-bar {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.progress-bar__bar-container {
+  padding: 2px;
+  background: #0c122c;
+  border-radius: 14px;
+  width: 100%;
+  margin: 10px 0px;
+}
+.progress-bar__bar {
+  background: linear-gradient(to right, #ffa399, #ff4d97);
+  height: 10px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  border-radius: 10px;
+  width: 81.5%;
+}
+.progress-bar__cursor {
+  background: #dddbff;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 2px;
+}
+.progress-bar__boundary {
+  font-weight: 700;
+}
+
+.stock {
+  background: white;
+  border-radius: 15px;
+  padding: 15px;
+}
+.stock__number {
+  color: #0c122c;
+  font-size: 2em;
+  font-weight: 700;
+}
+.stock__left {
+  color: #848794;
+}
+
+/*# sourceMappingURL=fylo-data.css.map */
