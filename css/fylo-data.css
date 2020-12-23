@@ -1,3 +1,8 @@
+html, body {
+  padding: 0px;
+  margin: 0px;
+}
+
 html {
   font-family: "Raleway", sans-serif;
   font-size: 14px;
@@ -7,9 +12,10 @@ html {
 
 body {
   background: url(../images/bg-desktop.png) no-repeat bottom left, #0c122c;
-  background-size: 100% 300px;
+  background-size: 100% 50%;
+  min-height: 100%;
 }
-@media (max-width: 600px) {
+@media (max-width: 400px) {
   body {
     background: url(../images/bg-mobile.png) no-repeat top left, #0c122c;
     background-size: 100% 100%;
@@ -21,8 +27,10 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  padding: 20px;
+  padding-top: 180px;
 }
-@media (min-width: 600px) {
+@media (min-width: 400px) {
   .main-container {
     flex-wrap: nowrap;
   }
@@ -33,12 +41,14 @@ body {
 
 .tool-bar {
   background-color: #1d2c67;
-  border-radius: 10px 60px 10px 10px;
-  width: 80%;
-  padding: 25px;
+  border-radius: 10px 80px 10px 10px;
+  padding: 25px 37px;
+  max-width: 400px;
+  flex: 1 0 auto;
 }
 .tool-bar__logo {
   display: block;
+  margin: 8px;
 }
 .tool-bar__icon {
   border: 10px solid #0c122c;
@@ -72,6 +82,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 20px 40px;
+  flex: 2 0 auto;
 }
 
 .usage__size {
@@ -80,7 +91,7 @@ body {
 }
 
 .progress-bar {
-  width: 80%;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -116,6 +127,9 @@ body {
   background: white;
   border-radius: 15px;
   padding: 15px;
+  position: relative;
+  top: 30px;
+  margin: -20px;
 }
 .stock__number {
   color: #0c122c;

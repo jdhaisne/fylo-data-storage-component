@@ -5,6 +5,11 @@ $grayish-blue: hsl(229, 7%, 55%);
 $dark-blue: hsl(228, 56%, 26%);
 $very-dark-blue: hsl(229, 57%, 11%);
 
+html, body {
+    padding: 0px;
+    margin: 0px;
+}
+
 html{
     font-family: 'Raleway', sans-serif;
     font-size: 14px;
@@ -14,8 +19,9 @@ html{
 
 body {
     background: url(../images/bg-desktop.png) no-repeat bottom left, $very-dark-blue;
-    background-size: 100% 300px;
-    @media (max-width: 600px) {
+    background-size: 100% 50%;
+    min-height: 100%;
+    @media (max-width: 400px) {
         background: url(../images/bg-mobile.png) no-repeat top left, $very-dark-blue;
         background-size: 100% 100%;
     }
@@ -26,7 +32,9 @@ body {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    @media (min-width: 600px) {
+    padding: 20px;
+    padding-top: 180px;
+    @media (min-width: 400px) {
         flex-wrap: nowrap;
     }
     &__secondary-container {
@@ -37,12 +45,13 @@ body {
 .tool-bar {
     
     background-color: $dark-blue;
-    border-radius: 10px 60px 10px 10px;
-    width: 80%;
-    padding: 25px;
-
+    border-radius: 10px 80px 10px 10px;
+    padding: 25px 37px;
+    max-width: 400px;
+    flex: 1 0 auto;
     &__logo {
         display: block;
+        margin: 8px
     }
 
     &__icon {
@@ -78,6 +87,7 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 20px 40px;
+    flex: 2 0 auto;
 }
 
 .usage {
@@ -88,7 +98,7 @@ body {
 }
 
 .progress-bar {
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -125,7 +135,9 @@ body {
     border-radius: 15px;
 
     padding: 15px;
-
+    position: relative;
+    top: 30px;
+    margin: -20px;
     &__number {
         color: $very-dark-blue;
         font-size: 2em;
