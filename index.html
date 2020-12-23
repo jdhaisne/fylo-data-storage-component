@@ -7,7 +7,6 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet"> 
-
   <link rel="stylesheet" href="./css/fylo-data.css">
   
   <title>Frontend Mentor | Fylo data storage component</title>
@@ -37,7 +36,7 @@
     </div>
     <div class="storage-info main-container__secondary-container">
       <div class="usage">
-        You’ve used <strong class="usage__size">815 GB</strong>  of your storage
+        You’ve used <strong class="usage__size"><span class="usage__number">815</span> GB</strong>  of your storage
       </div>
       
       
@@ -57,9 +56,39 @@
       </div>
     </div>    
   </div>
+  <button class="btn btn--try" onclick="try_progress()">
+    try
+  </button>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+  <script  type="text/javascript">
+  var i = 0;
+    function try_progress() {
+      if (i == 0) {
+        var progress_bar__bar = document.getElementsByClassName("progress-bar__bar");
+        var usage__number = document.getElementsByClassName("usage__number");
+        var stock__number = document.getElementsByClassName("stock__number");
+        data_used = 0;
+        i= 1;
+        id = setInterval(() => {
+          if (data_used >= 1000) {
+            clearInterval(id);
+            i = 0
+          }
+          else {
+            data_used++;
+            progress_bar__bar[0].style.width = (data_used / 10) + "%";
+            usage__number[0].innerHTML = data_used
+            stock__number[0].innerHTML = 1000- data_used
+          }
+        }, 10);
+      }
+      
+      
+      console.log("done");
+    };
+  </script>
 </body>
 </html>
