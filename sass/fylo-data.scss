@@ -31,11 +31,13 @@ body {
     margin: auto;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-end;
     padding: 20px;
     padding-top: 180px;
-    @media (min-width: 400px) {
+    @media (min-width: 610px) {
         flex-wrap: nowrap;
+        padding-left: 15%;
+        padding-right: 15%;
     }
     &__secondary-container {
         margin: 10px;
@@ -47,7 +49,6 @@ body {
     background-color: $dark-blue;
     border-radius: 10px 80px 10px 10px;
     padding: 25px 37px;
-    max-width: 400px;
     flex: 1 0 auto;
     &__logo {
         display: block;
